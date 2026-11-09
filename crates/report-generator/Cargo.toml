@@ -1,0 +1,13 @@
+[package]
+name = "updrageguard-report-generator"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Produces upgrade reports in multiple formats"
+
+[dependencies]
+updrageguard-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

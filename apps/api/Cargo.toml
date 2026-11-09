@@ -1,0 +1,28 @@
+[package]
+name = "updrageguard-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Backend API for UpdrageGuard"
+
+[[bin]]
+name = "updrageguard-api"
+path = "src/main.rs"
+
+[dependencies]
+updrageguard-core = { workspace = true }
+updrageguard-version-comparator = { workspace = true }
+updrageguard-storage-analyzer = { workspace = true }
+updrageguard-risk-engine = { workspace = true }
+updrageguard-report-generator = { workspace = true }
+
+axum = "0.7"
+tower = "0.5"
+tower-http = { version = "0.6", features = ["trace", "cors"] }
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }

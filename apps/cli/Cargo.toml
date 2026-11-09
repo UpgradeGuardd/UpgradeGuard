@@ -1,0 +1,24 @@
+[package]
+name = "updrageguard-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Command-line interface for UpdrageGuard"
+
+[[bin]]
+name = "updrageguard"
+path = "src/main.rs"
+
+[dependencies]
+updrageguard-core = { workspace = true }
+updrageguard-version-comparator = { workspace = true }
+updrageguard-storage-analyzer = { workspace = true }
+updrageguard-risk-engine = { workspace = true }
+updrageguard-report-generator = { workspace = true }
+
+clap = { version = "4", features = ["derive"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }

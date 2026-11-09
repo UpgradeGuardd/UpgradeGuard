@@ -1,0 +1,48 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/wasm-analyzer",
+    "crates/version-comparator",
+    "crates/storage-analyzer",
+    "crates/migration-engine",
+    "crates/simulation-engine",
+    "crates/test-generator",
+    "crates/risk-engine",
+    "crates/report-generator",
+    "apps/api",
+    "apps/cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["UpdrageGuard Contributors"]
+license = "MIT"
+repository = "https://github.com/UpdrageGuard/updrageguard"
+readme = "README.md"
+
+[workspace.dependencies]
+# Shared workspace dependencies - keep versions in sync across crates.
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1"
+
+# Internal crates are referenced by path so `cargo test --workspace` works locally.
+updrageguard-core = { path = "crates/core" }
+updrageguard-wasm-analyzer = { path = "crates/wasm-analyzer" }
+updrageguard-version-comparator = { path = "crates/version-comparator" }
+updrageguard-storage-analyzer = { path = "crates/storage-analyzer" }
+updrageguard-migration-engine = { path = "crates/migration-engine" }
+updrageguard-simulation-engine = { path = "crates/simulation-engine" }
+updrageguard-test-generator = { path = "crates/test-generator" }
+updrageguard-risk-engine = { path = "crates/risk-engine" }
+updrageguard-report-generator = { path = "crates/report-generator" }
+
+[profile.release]
+lto = true
+codegen-units = 1

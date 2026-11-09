@@ -1,0 +1,1 @@
+{"name": "@updrageguard/ui", "version": "0.1.0", "private": true, "type": "module", "main": "./src/index.ts", "types": "./src/index.ts", "exports": {".": "./src/index.ts"}, "scripts": {"lint": "tsc --noEmit", "test": "vitest run"}, "dependencies": {"react": "^18.3.1"}, "devDependencies": {"@types/react": "^18.3.12", "typescript": "^5.6.3", "vitest": "^2.1.6"}}

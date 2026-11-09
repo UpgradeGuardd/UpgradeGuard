@@ -1,4 +1,4 @@
-# UpgradegeGuard
+# UpdrageGuard
 
 ### Soroban Smart Contract Upgrade & Migration Safety Platform
 
@@ -133,6 +133,4 @@ MIT License.
 
 UpdrageGuard aims to make Soroban smart contract upgrades more transparent, predictable and reliable by helping developers identify risks and validate changes before deployment.
 
-**Build confidently. Upgrade safely. Protect what is already deployed.**
-
-Built for the Stellar ecosystem.
+**Build confidently. Upgrade safely.**
