@@ -1,0 +1,13 @@
+[package]
+name = "updrageguard-test-generator"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Generates regression tests for contract upgrades"
+
+[dependencies]
+updrageguard-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
